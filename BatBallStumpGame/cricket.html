@@ -16,21 +16,7 @@
   <h1>Bat Ball Stump Game</h1>
   <button onclick="
   
-  let randomNumber = Math.random()*3;
-  let computerChoice;
-
-  if(randomNumber >0 && randomNumber<=1){
-    computerChoice ='Bat';
-    //console.log('computer choice is Bat');
-
-  }else if(randomNumber>1 && randomNumber <=2){
-    computerChoice = 'Ball';
-    //console.log('computer choice is Ball');
-  }else{
-    computerChoice = 'Stump';
-    //console.log('computer choice is Stump');
-  }
-
+  generateComputerChoice();
  
 
   let resultMsg;
@@ -48,23 +34,7 @@
 
   <button onclick="
   
-  randomNumber = Math.random()*3;
-
-
-  if(randomNumber >0 && randomNumber<=1){
-    computerChoice ='Bat';
-    //console.log('computer choice is Bat');
-
-  }else if(randomNumber>1 && randomNumber <=2){
-    computerChoice = 'Ball';
-    //console.log('computer choice is Ball');
-  }else{
-    computerChoice = 'Stump';
-    //console.log('computer choice is Stump');
-  }
-
- 
-
+  generateComputerChoice();
 
   if(computerChoice==='Ball'){
     resultMsg ='Game Tied.';
@@ -83,21 +53,7 @@
 
   <button onclick="
   
-  randomNumber = Math.random()*3;
- 
-
-  if(randomNumber >0 && randomNumber<=1){
-    computerChoice ='Bat';
-    //console.log('computer choice is Bat');
-
-  }else if(randomNumber>1 && randomNumber <=2){
-    computerChoice = 'Ball';
-    //console.log('computer choice is Ball');
-  }else{
-    computerChoice = 'Stump';
-    //console.log('computer choice is Stump');
-  }
-
+  generateComputerChoice();
  
 
   
@@ -114,6 +70,26 @@
   " 
   >Stump</button>
 
+
+  <Script>
+    let computerChoice;
+    function generateComputerChoice(){
+      let randomNumber = Math.random()*3;
+
+      if(randomNumber >0 && randomNumber<=1){
+        computerChoice ='Bat';
+    
+      }else if(randomNumber>1 && randomNumber <=2){
+        computerChoice = 'Ball';
+    
+      }else{
+         computerChoice = 'Stump';
+    
+      }
+    }
+
+
+  </Script>
 
   
 </body>
