@@ -54,7 +54,10 @@
     let score ={
       win:0,
       lost:0,
-      tie:0
+      tie:0,
+      displayScore: function(){
+          return ` No of Matches Won:${score.win} , Lost:${score.lost} , Tied:${score.tie}`;
+      }
 
     };
    
@@ -137,8 +140,10 @@
       alert(` Your Choice is ${usermove} . Computer Choice is ${computermove} . 
       
       ${resultMsg}
+
+      ${score.displayScore()}`);
       
-      Won:${score.win} , Lost:${score.lost} , Tied:${score.tie}`);
+    
 
 
 
